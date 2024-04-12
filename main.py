@@ -43,3 +43,7 @@ if __name__=="__main__":
     prev={"Name":"Ishita Chauhan"}
     nextt={"$set":{"Dream":"I want to become richest"}}
     collection.update_one(prev,nextt)
+
+    prev1={"Name":"Avani Chaturvedi"}
+    nextt1={"$set":{"Dream":"Avani Vishesh Rathi"}}
+    collection.update_one(prev1,nextt1)
