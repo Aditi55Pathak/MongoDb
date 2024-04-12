@@ -27,3 +27,19 @@ if __name__=="__main__":
     # Find
     one = collection.find_one({"Name": "Aditi Pathak"})
     print(one)
+
+    # Listing all databases
+
+    allDbs=client.list_database_names()
+    print(allDbs)
+
+    # Listing all collections
+
+    col=client['Aditi']
+    print(col.list_collection_names)
+
+    # Update
+
+    prev={"Name":"Ishita Chauhan"}
+    nextt={"$set":{"Dream":"I want to become richest"}}
+    collection.update_one(prev,nextt)
