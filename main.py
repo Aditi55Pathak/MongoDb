@@ -7,9 +7,13 @@ if __name__=="__main__":
     print(client)
     db=client['Aditi']
     collection=db['mySampleCollection']
+
+    # INSERT ONE
+
     # dict={"Name":"Aanya Malhotra", "Age":"20", "Dream":"Rich and Successfull"}
     # collection.insert_one(dict)
 
+    # INSERT MANY  
     insertHere=[{"Name":"Aditi Pathak","Age":20,"Dream":"Will buy & BHK"},
                 {"Name":"Ishita Chauhan","Age":21,"Dream":"Will marry Mrinal"},
                 {"Name":"Avani Chaturvedi","Age":21,"Dream":"Will do AI/Ml"},
@@ -19,3 +23,7 @@ if __name__=="__main__":
                 {"Name":"Mahek Gor","Age":21,"Dream":"I am an archeoptrix"}]
     
     collection.insert_many(insertHere)
+
+    # Find
+    one = collection.find_one({"Name": "Aditi Pathak"})
+    print(one)
